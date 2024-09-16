@@ -1,36 +1,91 @@
+"use client";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { config } from "@/config";
+import { cn } from "@/lib/utils";
+import { Menu } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FunctionComponent } from "react";
+interface MenuItem {
+  name: string;
+  href: string;
+  openInNewTab?: boolean;
+}
 
 import styles from "./Header.module.scss";
 
-const Header = () => {
+const menuItems: MenuItem[] = [
+  { name: "Blog", href: "/" },
+  { name: "About", href: "/about" },
+];
+export const Navigation: FunctionComponent = () => {
+  const pathname = usePathname();
+
   return (
-    <header className={styles.header}>
-      <nav>
-        <Link href="/">
-          <svg
-            id="icon_s"
-            data-name="icon_s"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 501.3 436.13"
-          >
-            <path d="m18.13,400.48c33.43-45.45,85.95-154.98,126.84-215.78,15.69-23.32,104.32-152.97,148.24-160.91,43.92-7.94,124.57,23.24,124.57,23.24,0,0-39.42,25.59-43.56,34.98-4.13,9.39.28,112.78-41.09,163-41.37,50.22-194.98,158.47-194.98,158.47l56.92-38.99s69.7.22,86.7,0" />
-          </svg>
-        </Link>
-        <ul>
-          <li>
-            <Link href="/about" scroll={false}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="/works" scroll={false}>
-              Works
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <nav>
+      <div className="hidden md:flex items-center">
+        {menuItems.map((item) => (
+          <div key={item.href} className="ml-4 md:ml-8">
+            <a
+              href={item.href}
+              target={item.openInNewTab ? "_blank" : "_self"}
+              className={cn(
+                "hover:text-gray-900",
+                pathname === item.href && "font-semibold"
+              )}
+            >
+              {item.name}
+            </a>
+          </div>
+        ))}
+      </div>
+      <div className="md:hidden">
+        <Sheet>
+          <SheetTrigger>
+            <Menu size="24" />
+          </SheetTrigger>
+          <SheetContent>
+            <SheetHeader>
+              <SheetDescription>
+                {menuItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target={item.openInNewTab ? "_blank" : "_self"}
+                    className={cn(
+                      "block py-2",
+                      pathname === item.href && "font-semibold"
+                    )}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </SheetDescription>
+            </SheetHeader>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </nav>
   );
 };
 
-export default Header;
+export const Header: FunctionComponent = () => {
+  return (
+    <header className={styles.header}>
+      <section className="flex items-center justify-between mt-8 md:mt-16 mb-12">
+        <Link href="/">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
+            {config.blog.name}
+          </h1>
+        </Link>
+        <Navigation />
+      </section>
+    </header>
+  );
+};
