@@ -26,7 +26,7 @@ export const Navigation: FunctionComponent = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="top-0">
+    <nav>
       <div className="hidden md:flex items-center">
         {menuItems.map((item) => (
           <div key={item.href} className="ml-4 md:ml-8">
@@ -75,8 +75,8 @@ export const Navigation: FunctionComponent = () => {
 
 export const Header: FunctionComponent = () => {
   return (
-    <header>
-      <section className="flex items-center justify-between mt-8 md:mt-16 mb-12">
+    <header className="sticky top-4">
+      <section className="flex items-center justify-between mb-12">
         <Link href="/">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
             {config.blog.name}
