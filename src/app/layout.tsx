@@ -6,6 +6,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "next-themes";
 const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 // const geistSans = localFont({
@@ -36,13 +37,20 @@ export default function RootLayout({
       > */}
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-6xl m-auto",
+          "container mx-auto px-5 mb-10 min-h-screen bg-background font-sans antialiased max-w-6xl m-auto",
           fontSans.variable
         )}
       >
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

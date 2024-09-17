@@ -26,6 +26,7 @@ export const Footer: FunctionComponent = () => {
               <Rss className="w-4 h-4" />
             </Button>
           </Link>
+          {/* テーマモードの切り替え */}
           <DarkModeToggle />
         </div>
       </div>

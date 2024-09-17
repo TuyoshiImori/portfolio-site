@@ -18,8 +18,6 @@ interface MenuItem {
   openInNewTab?: boolean;
 }
 
-import styles from "./Header.module.scss";
-
 const menuItems: MenuItem[] = [
   { name: "Blog", href: "/" },
   { name: "About", href: "/about" },
@@ -28,7 +26,7 @@ export const Navigation: FunctionComponent = () => {
   const pathname = usePathname();
 
   return (
-    <nav>
+    <nav className="top-0">
       <div className="hidden md:flex items-center">
         {menuItems.map((item) => (
           <div key={item.href} className="ml-4 md:ml-8">
@@ -77,7 +75,7 @@ export const Navigation: FunctionComponent = () => {
 
 export const Header: FunctionComponent = () => {
   return (
-    <header className={styles.header}>
+    <header>
       <section className="flex items-center justify-between mt-8 md:mt-16 mb-12">
         <Link href="/">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
