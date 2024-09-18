@@ -37,7 +37,7 @@ export default function RootLayout({
       > */}
       <body
         className={cn(
-          "container mx-auto px-5 mb-10 min-h-screen bg-background font-sans antialiased max-w-6xl m-auto",
+          "mb-10 min-h-screen bg-background font-sans antialiased  m-auto",
           fontSans.variable
         )}
       >
@@ -47,9 +47,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          {children}
-          <Footer />
+          <div className="relative">
+            <Header />
+            <div className="container mx-auto px-5">
+              {children}
+              <Footer />
+            </div>
+          </div>
         </ThemeProvider>
       </body>
     </html>

@@ -7,7 +7,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { config } from "@/config";
-import { cn } from "@/lib/utils";
+import { cn, glassmorphism } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -19,8 +19,10 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { name: "Blog", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "blog", href: "/" },
+  { name: "about", href: "/about" },
+  { name: "works", href: "/works" },
+  { name: "contact", href: "/contact" },
 ];
 export const Navigation: FunctionComponent = () => {
   const pathname = usePathname();
@@ -48,7 +50,7 @@ export const Navigation: FunctionComponent = () => {
           <SheetTrigger>
             <Menu size="24" />
           </SheetTrigger>
-          <SheetContent>
+          <SheetContent className={`bg-transparent ${glassmorphism}`}>
             <SheetHeader>
               <SheetDescription>
                 {menuItems.map((item) => (
@@ -75,10 +77,10 @@ export const Navigation: FunctionComponent = () => {
 
 export const Header: FunctionComponent = () => {
   return (
-    <header className="sticky top-4">
-      <section className="flex items-center justify-between mb-12">
+    <header className={`absolute z-10 sticky top-0 ${glassmorphism}`}>
+      <section className="flex items-center justify-between py-4 px-5">
         <Link href="/">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
+          <h1 className="text-4xl font-bold tracking-tighter leading-tight">
             {config.blog.name}
           </h1>
         </Link>
