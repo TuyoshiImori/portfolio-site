@@ -77,8 +77,10 @@ export const Navigation: FunctionComponent = () => {
 
 export const Header: FunctionComponent = () => {
   return (
-    <header className={`absolute z-10 sticky top-0 ${glassmorphism}`}>
-      <section className="flex items-center justify-between py-4 px-5">
+    <header className={`absolute z-10 sticky top-0 px-20 py-4`}>
+      <section
+        className={`flex items-center justify-between px-12 py-4 rounded-full ${glassmorphism}`}
+      >
         <Link href="/">
           <h1 className="text-4xl font-bold tracking-tighter leading-tight">
             {config.blog.name}
