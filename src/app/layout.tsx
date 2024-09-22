@@ -49,15 +49,17 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative">
-            <BlurryBlob
-              className="absolute z-[-1]"
-              firstBlobColor="bg-blue-400"
-              secondBlobColor="bg-purple-400"
-            />
-            <Header />
-            <div className="container mx-auto px-5">
-              {children}
-              <Footer />
+            <div>
+              <BlurryBlob
+                className=""
+                firstBlobColor="bg-blue-400"
+                secondBlobColor="bg-purple-400"
+              />
+              <Header />
+              <div className="container mx-auto px-5">
+                {children}
+                <Footer />
+              </div>
             </div>
           </div>
         </ThemeProvider>
