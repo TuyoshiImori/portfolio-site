@@ -50,9 +50,13 @@ export default function RootLayout({
         >
           <div className="relative">
             <div>
-              <BlurryBlob className="bottom-0 left-0 bg-blue-400 absolute" />
-              <BlurryBlob className="top-0 right-0 bg-green-400 absolute" />
-              <BlurryBlob className="bg-purple-400" />
+              <div
+                className="fixed top-0 left-0 w-full h-screen z-[-1]
+               bg-gradient-to-br from-blue-400 via-green-400 to-purple-400"
+              />
+              <BlurryBlob className="bottom-0 left-0 bg-blue-400 absolute h-36 w-36 animate-move-vertical" />
+              <BlurryBlob className="top-0 right-0 bg-green-400 absolute h-36 w-36 animate-move-horizontal" />
+              <BlurryBlob className="bg-purple-400 h-72 w-72 animate-pop-blob" />
               <Header />
               <div className="container mx-auto px-5">
                 {children}

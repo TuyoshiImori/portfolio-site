@@ -1,14 +1,6 @@
 "use client";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import { config } from "@/config";
 import { cn, glassmorphism } from "@/lib/utils";
-import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FunctionComponent } from "react";
@@ -44,32 +36,6 @@ export const Navigation: FunctionComponent = () => {
             </a>
           </div>
         ))}
-      </div>
-      <div className="md:hidden">
-        <Sheet>
-          <SheetTrigger>
-            <Menu size="24" />
-          </SheetTrigger>
-          <SheetContent className={`bg-transparent ${glassmorphism}`}>
-            <SheetHeader>
-              <SheetDescription>
-                {menuItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    target={item.openInNewTab ? "_blank" : "_self"}
-                    className={cn(
-                      "block py-2",
-                      pathname === item.href && "font-semibold"
-                    )}
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </SheetDescription>
-            </SheetHeader>
-          </SheetContent>
-        </Sheet>
       </div>
     </nav>
   );

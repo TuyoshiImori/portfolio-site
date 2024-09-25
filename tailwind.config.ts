@@ -20,38 +20,38 @@ const config: Config = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        border: "hex(var(--border))",
+        input: "hex(var(--input))",
+        ring: "hex(var(--ring))",
+        background: "hex(var(--background))",
+        foreground: "hex(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "hex(var(--primary))",
+          foreground: "hex(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "hex(var(--secondary))",
+          foreground: "hex(var(--secondary-foreground))",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: "hex(var(--destructive))",
+          foreground: "hex(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "hex(var(--muted))",
+          foreground: "hex(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "hex(var(--accent))",
+          foreground: "hex(var(--accent-foreground))",
         },
         popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "hex(var(--popover))",
+          foreground: "hex(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "hex(var(--card))",
+          foreground: "hex(var(--card-foreground))",
         },
         filter: {
           "blur-20": "blur(20px)",
@@ -78,11 +78,21 @@ const config: Config = {
           "66%": { transform: "scale(0.8)" },
           "100%": { transform: "scale(1)" },
         },
+        moveVertical: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-100px)" },
+        },
+        moveHorizontal: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(-100px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "pop-blob": "pop-blob 5s infinite",
+        "move-vertical": "moveVertical 5s ease-in-out infinite",
+        "move-horizontal": "moveHorizontal 5s ease-in-out infinite",
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],

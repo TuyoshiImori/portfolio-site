@@ -7,7 +7,7 @@ export default function BlurryBlob({ className }: BlobProps) {
       <div className="relative w-full h-full flex items-center justify-center">
         <div
           className={cn(
-            "h-72 w-72 animate-pop-blob rounded-full p-8 opacity-45 mix-blend-multiply blur-3xl filter",
+            "rounded-full p-8 opacity-45 mix-blend-multiply blur-xl filter",
             className
           )}
         />
