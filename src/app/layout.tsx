@@ -33,9 +33,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      > */}
       <body
         className={cn(
           "mb-10 min-h-screen bg-background font-sans antialiased  m-auto",
@@ -50,13 +47,9 @@ export default function RootLayout({
         >
           <div className="relative">
             <div>
-              <div
-                className="fixed top-0 left-0 w-full h-screen z-[-1]
-               bg-gradient-to-br from-blue-400 via-green-400 to-purple-400"
-              />
-              <BlurryBlob className="bottom-0 left-0 bg-blue-400 absolute h-36 w-36 animate-move-vertical" />
-              <BlurryBlob className="top-0 right-0 bg-green-400 absolute h-36 w-36 animate-move-horizontal" />
-              <BlurryBlob className="bg-purple-400 h-72 w-72 animate-pop-blob" />
+              <BlurryBlob className="h-36 w-36 animate-move-vertical bg-gradient-to-br from-teal-400 to-blue-500 bottom-0 left-0 absolute" />
+              <BlurryBlob className="h-36 w-36 animate-move-horizontal bg-gradient-to-br from-pink-500 to-orange-500 top-0 right-0 absolute" />
+              <BlurryBlob className="h-72 w-72 animate-pop-blob bg-purple-400" />
               <Header />
               <div className="container mx-auto px-5">
                 {children}

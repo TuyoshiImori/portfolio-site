@@ -3,7 +3,6 @@ import { config } from "@/config";
 import { Rss } from "lucide-react";
 import Link from "next/link";
 import { FunctionComponent } from "react";
-import { DarkModeToggle } from "@/components/DarkModeToggle";
 import { Button } from "./ui/button";
 
 export const Footer: FunctionComponent = () => {
@@ -26,8 +25,6 @@ export const Footer: FunctionComponent = () => {
               <Rss className="w-4 h-4" />
             </Button>
           </Link>
-          {/* テーマモードの切り替え */}
-          <DarkModeToggle />
         </div>
       </div>
       <div className="text-xs text-muted-foreground lg:hidden">
