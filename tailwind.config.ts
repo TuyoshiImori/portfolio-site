@@ -19,45 +19,7 @@ const config: Config = {
       },
     },
     extend: {
-      colors: {
-        border: "hex(var(--border))",
-        input: "hex(var(--input))",
-        ring: "hex(var(--ring))",
-        background: "hex(var(--background))",
-        foreground: "hex(var(--foreground))",
-        primary: {
-          DEFAULT: "hex(var(--primary))",
-          foreground: "hex(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hex(var(--secondary))",
-          foreground: "hex(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hex(var(--destructive))",
-          foreground: "hex(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hex(var(--muted))",
-          foreground: "hex(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hex(var(--accent))",
-          foreground: "hex(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hex(var(--popover))",
-          foreground: "hex(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hex(var(--card))",
-          foreground: "hex(var(--card-foreground))",
-        },
-        filter: {
-          "blur-20": "blur(20px)",
-          "blur-25": "blur(25px)",
-        },
-      },
+      colors: {},
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

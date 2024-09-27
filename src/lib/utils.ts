@@ -6,4 +6,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // グラスモーフィズムのスタイル
-export const glassmorphism = "backdrop-blur-md border border-border shadow-lg";
+export const glassmorphism =
+  "backdrop-blur-md border border-border shadow-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-md backdrop-saturate-150";
