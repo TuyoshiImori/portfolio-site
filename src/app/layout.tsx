@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { cn } from "@/lib/utils";
+import { cn } from "@/libs/utils";
 import { ThemeProvider } from "next-themes";
 import BlurryBlob from "@/components/animate/background/blurry-blob";
 const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans" });

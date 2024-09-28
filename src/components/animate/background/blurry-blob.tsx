@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/libs/utils";
 interface BlobProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export default function BlurryBlob({ className }: BlobProps) {

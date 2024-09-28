@@ -1,6 +1,6 @@
 "use client";
 import { config } from "@/config";
-import { cn, glassmorphism } from "@/lib/utils";
+import { cn, glassmorphism } from "@/libs/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FunctionComponent } from "react";
