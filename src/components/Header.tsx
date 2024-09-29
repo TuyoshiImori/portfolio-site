@@ -43,7 +43,8 @@ export const Navigation: FunctionComponent = () => {
 
 export const Header: FunctionComponent = () => {
   return (
-    <header className="absolute z-10 w-full top-0 px-20 py-4">
+    // headerにstickyを追加して常に上に固定されるようにする
+    <header className="sticky z-10 w-full top-0 px-20 py-4">
       <section
         className={`flex items-center justify-between px-12 py-4 rounded-full ${glassmorphism}`}
       >
