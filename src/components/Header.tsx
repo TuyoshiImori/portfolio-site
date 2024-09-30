@@ -11,10 +11,8 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { name: "blog", href: "/" },
   { name: "about", href: "/about" },
   { name: "works", href: "/works" },
-  { name: "contact", href: "/contact" },
 ];
 export const Navigation: FunctionComponent = () => {
   const pathname = usePathname();
