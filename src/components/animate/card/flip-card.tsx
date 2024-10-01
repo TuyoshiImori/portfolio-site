@@ -1,5 +1,6 @@
 import { cn } from "@/libs/utils";
 import Image from "next/image";
+import imageSize from "image-size";
 
 interface FlipCardProps extends React.HTMLAttributes<HTMLDivElement> {
   image: string;
@@ -32,7 +33,7 @@ export default function FlipCard({
 
   return (
     <div
-      className={cn("group h-72 w-56 [perspective:1000px]", className)}
+      className={cn("group h-48 w-48 [perspective:1000px]", className)}
       {...props}
     >
       <div
@@ -46,9 +47,12 @@ export default function FlipCard({
           <Image
             src={image}
             alt="image"
+            height={imageSize("public" + image).height}
+            width={imageSize("public" + image).width}
+            priority
             className="h-full w-full rounded-2xl object-cover shadow-2xl shadow-black/40"
           />
-          <div className="absolute bottom-4 left-4 text-xl font-bold text-white">
+          <div className="absolute bottom-4 left-4 text-xl font-bold text-text-light dark:text-text-dark">
             {title}
           </div>
         </div>

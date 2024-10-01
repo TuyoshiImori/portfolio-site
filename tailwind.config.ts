@@ -19,7 +19,12 @@ const config: Config = {
       },
     },
     extend: {
-      colors: {},
+      colors: {
+        text: {
+          light: "#ffffff",
+          dark: "#000000",
+        },
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
-import { Inter } from "next/font/google";
 
 import "./globals.css";
 import { Footer } from "@/components/Footer";
@@ -8,7 +6,7 @@ import { cn } from "@/libs/utils";
 import { ThemeProvider } from "next-themes";
 import BlurryBlob from "@/components/animate/background/blurry-blob";
 import { Header } from "@/components/Header";
-const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans" });
+import { body_font, display_font } from "@/libs/fonts";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -36,7 +34,9 @@ export default function RootLayout({
       <body
         className={cn(
           "mb-10 min-h-screen bg-background font-sans antialiased  m-auto",
-          fontSans.variable
+
+          body_font.variable,
+          display_font.variable
         )}
       >
         <ThemeProvider
