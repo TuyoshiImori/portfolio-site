@@ -33,7 +33,7 @@ export default function FlipCard({
 
   return (
     <div
-      className={cn("group h-48 w-48 [perspective:1000px]", className)}
+      className={cn("group h-40 w-40 [perspective:1000px]", className)}
       {...props}
     >
       <div
@@ -50,9 +50,9 @@ export default function FlipCard({
             height={imageSize("public" + image).height}
             width={imageSize("public" + image).width}
             priority
-            className="h-full w-full rounded-2xl object-cover shadow-2xl shadow-black/40"
+            className="h-full w-full rounded-3xl object-cover shadow-2xl shadow-black/40"
           />
-          <div className="absolute bottom-4 left-4 text-xl font-bold text-text-light dark:text-text-dark">
+          <div className="absolute bottom-4 left-4 text-sm font-bold text-white">
             {title}
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function FlipCard({
           )}
         >
           <div className="flex min-h-full flex-col gap-2">
-            <h1 className="text-xl font-bold text-white">{subtitle}</h1>
+            <h1 className="text-sm font-bold text-white">{subtitle}</h1>
             <p className="mt-1 border-t border-t-gray-200 py-4 text-base font-medium leading-normal text-gray-100">
               {description}{" "}
             </p>

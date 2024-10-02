@@ -19,6 +19,9 @@ const config: Config = {
       },
     },
     extend: {
+      width: {
+        200: "50rem",
+      },
       colors: {
         text: {
           light: "#ffffff",

@@ -1,13 +1,11 @@
 ---
 title: "G#"
 description: "グリッド配列の音楽演奏アプリ"
-image: "g_sharp/g_sharp.png"
-date: "2024-02-02"
-tags: "#design"
+image: "g_sharp/g_sharp.jpg"
+date: "2024-09-01"
+tags: "#Flutter"
 ---
 
-szne のロゴ（3 代目）です。
+### 使用技術
 
-### 使用したもの
-
-- Adobe illustrator
+- Flutter

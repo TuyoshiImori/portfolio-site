@@ -7,8 +7,8 @@ export default async function Works() {
   return (
     <section>
       <div className="">Works</div>
-      <div>
-        {works.slice(0, 4).map((post) => {
+      <div className="grid grid-cols-4 gap-12">
+        {works.map((post) => {
           const imagePath = post.frontmatter.image?.startsWith("/")
             ? post.frontmatter.image
             : "/works/" + post.frontmatter.image;
@@ -16,8 +16,8 @@ export default async function Works() {
             <FlipCard
               key={post.slug}
               image={imagePath}
-              title={"タイトル"}
-              description={"説明文"}
+              title={post.frontmatter.title}
+              description={post.frontmatter.description}
             />
           );
         })}
