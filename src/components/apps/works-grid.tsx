@@ -1,7 +1,7 @@
 import getWorks from "@/libs/getWorks";
 import AppCard from "@/components/animate/card/app-card";
 
-export default async function Works() {
+export default async function WorksGrid() {
   const works = await getWorks;
 
   return (
@@ -18,6 +18,7 @@ export default async function Works() {
               image={imagePath}
               title={post.frontmatter.title}
               description={post.frontmatter.description}
+              slug={post.slug}
             />
           );
         })}
