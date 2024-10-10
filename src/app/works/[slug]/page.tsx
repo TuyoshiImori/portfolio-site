@@ -26,7 +26,7 @@ export default function Home({ params }: { params: { slug: string } }) {
 
   return (
     <div className="flex flex-col justify-center items-center justify-items-center">
-      <div className=" items-center">
+      <div className="items-center">
         <div
           className={`h-44 w-44 rounded-3xl ${glassmorphism} flex justify-center items-center `}
         >
@@ -42,7 +42,7 @@ export default function Home({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </div>
-      <div className="items-start">
+      <div className="px-8 md:w-160">
         <div className="text-base font-bold mt-4">{title}</div>
         <div className="text-base font-bold mt-4">{date}</div>
         <div className="text-base font-bold mt-4">{tags}</div>
