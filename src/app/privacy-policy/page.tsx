@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-export default function PolicyCondition  () {
+export default function PolicyCondition() {
   return (
     <>
       <div className="main-text-area ptb-80">
@@ -143,6 +143,5 @@ export default function PolicyCondition  () {
         </div>
       </div>
     </>
-  )
+  );
 }
-

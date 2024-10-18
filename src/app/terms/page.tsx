@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-export default function  TermCondition() {
+export default function TermCondition() {
   return (
     <>
       <div className="main-text-area ptb-80">
@@ -145,6 +145,5 @@ export default function  TermCondition() {
         </div>
       </div>
     </>
-  )
+  );
 }
-
