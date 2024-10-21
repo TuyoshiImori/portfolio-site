@@ -3,7 +3,27 @@ import Image from "next/image";
 import imageSize from "image-size";
 import MarkdownRenderer from "@/components/apps/markdown";
 import { getMarkdownData } from "@/libs/getMarkdownData";
+import path from "path";
+import fs from "fs";
+import matter from "gray-matter";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const { slug } = params;
+  const filePath = path.join(process.cwd(), "public/works", `${slug}.md`); // ファイルの絶対パスを生成
+
+  // ファイルの中身を取得
+  const fileContents = fs.readFileSync(filePath, "utf8"); // ファイルの中身をUTF-8で読み込む
+  const { data } = matter(fileContents); // Markdownファイルのfrontmatterと本文を抽出
+
+  const title = data.title; // 記事のタイトル
+  return {
+    title: title,
+  };
+}
 export default function WorkSlugCondition({
   params,
 }: {

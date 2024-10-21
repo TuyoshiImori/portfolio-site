@@ -2,6 +2,10 @@ import MarkdownRenderer from "@/components/apps/markdown";
 import { getMarkdownData } from "@/libs/getMarkdownData";
 import React from "react";
 
+export const metadata = {
+  title: "プロフィール",
+};
+
 export default function ProfileCondition() {
   const filePath = `public/profile.md`;
   const { content } = getMarkdownData(filePath);

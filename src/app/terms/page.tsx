@@ -2,6 +2,10 @@ import MarkdownRenderer from "@/components/apps/markdown";
 import { getMarkdownData } from "@/libs/getMarkdownData";
 import React from "react";
 
+export const metadata = {
+  title: "利用規約",
+};
+
 export default function TermCondition() {
   const filePath = `public/terms.md`;
   const { content } = getMarkdownData(filePath);
