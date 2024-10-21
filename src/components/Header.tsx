@@ -13,8 +13,6 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
   { name: "プロフィール", href: "/profile" },
   { name: "作品一覧", href: "/works" },
-  { name: "プライバシーポリシー", href: "/privacy-policy" },
-  { name: "利用規約", href: "/terms" },
 ];
 export const Navigation: FunctionComponent = () => {
   const pathname = usePathname();
