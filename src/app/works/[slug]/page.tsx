@@ -4,7 +4,11 @@ import imageSize from "image-size";
 import MarkdownRenderer from "@/components/apps/markdown";
 import { getMarkdownData } from "@/libs/getMarkdownData";
 
-export default function Home({ params }: { params: { slug: string } }) {
+export default function WorkSlugCondition({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const { slug } = params;
   const filePath = `public/works/${slug}.md`;
   const { data, content } = getMarkdownData(filePath);

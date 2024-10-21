@@ -67,6 +67,6 @@
 
 個人情報の取扱いに関するお問い合わせは、以下の連絡先までお願いします。
 
-Mail: info.kamoit@gmail.com
+Mail: iiyotu0729@gmail.com
 
 以上。

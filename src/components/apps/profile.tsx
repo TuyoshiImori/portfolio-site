@@ -1,7 +1,7 @@
-export default async function About() {
+export default async function Profile() {
   return (
     <section>
-      <div className="text-lg font-bold mb-4">About Me</div>
+      <div className="text-lg font-bold mb-4">プロフィール</div>
       <div className="text-lg gap-12">
         はじめまして、いもりんと申します。
         <br />

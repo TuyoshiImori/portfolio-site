@@ -11,10 +11,10 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { name: "about", href: "/about" },
-  { name: "works", href: "/works" },
-  { name: "privacy policy", href: "/privacy-policy" },
-  { name: "terms", href: "/terms" },
+  { name: "プロフィール", href: "/profile" },
+  { name: "作品一覧", href: "/works" },
+  { name: "プライバシーポリシー", href: "/privacy-policy" },
+  { name: "利用規約", href: "/terms" },
 ];
 export const Navigation: FunctionComponent = () => {
   const pathname = usePathname();
@@ -28,11 +28,14 @@ export const Navigation: FunctionComponent = () => {
               href={item.href}
               target={item.openInNewTab ? "_blank" : "_self"}
               className={cn(
-                "hover:text-gray-900",
+                "inline-block",
                 pathname === item.href && "font-semibold"
               )}
+              style={{ width: `${item.name.length * 1.6}ch` }}
             >
-              {item.name}
+              <span className="inline-block duration-200 transform hover:scale-90">
+                {item.name}
+              </span>
             </a>
           </div>
         ))}
