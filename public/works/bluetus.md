@@ -1,7 +1,7 @@
 ---
 title: "Bluetus"
 description: "Bluetoothデバイスの接続状態を一目で把握するシンプルな管理アプリ"
-image: "g_sharp/g_sharp.jpg"
+image: "bluetus/bluetus.jpg"
 date: "2026-01-10"
 tags: "#iOS #SwiftUI"
 ---
