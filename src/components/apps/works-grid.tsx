@@ -7,7 +7,7 @@ export default async function WorksGrid() {
   return (
     <section>
       <div className="text-3xl font-bold mb-4">作品一覧</div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
         {works.map((post) => {
           const imagePath = post.frontmatter.image?.startsWith("/")
             ? post.frontmatter.image

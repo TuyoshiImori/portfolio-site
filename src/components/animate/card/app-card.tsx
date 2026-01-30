@@ -20,10 +20,10 @@ export default function AppCard({
   return (
     <div className={cn(className)} {...props}>
       <div
-        className={`h-44 w-44 rounded-3xl ${glassmorphism} flex justify-center items-center `}
+        className={`h-36 w-36 rounded-3xl ${glassmorphism} flex justify-center items-center `}
       >
         <Link href={`/works/${slug}`}>
-          <div className="h-40 w-40 hover:scale-95 duration-200">
+          <div className="h-32 w-32 hover:scale-95 duration-200">
             <Image
               src={image}
               alt="image"

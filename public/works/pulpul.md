@@ -3,7 +3,7 @@ title: "パルパル"
 description: "音楽を続けたい人のためのOG・OB訪問型マッチングアプリ"
 image: "pulpul/pulpul.jpg"
 date: "2022-03-01"
-tags: "#iOS #Android"
+tags: "#iOS #Android #Flutter"
 ---
 
 音楽を続けたい学生と音楽を続けている社会人をマッチングさせるOG・OB訪問型マッチングアプリ。
@@ -13,7 +13,7 @@ tags: "#iOS #Android"
 - Flutter
 - Firebase
 
-## 「パルパル」について
+## 「パルパル」の開発背景
 
 Flutter開発の長期インターンを始めて約3ヶ月が経ち、Firebaseを使いこなせるようになったことで、前作のQRアプリよりも規模の大きいアプリが作れる自信がついたため、次に取り組むアプリの企画を考え始めました。
 

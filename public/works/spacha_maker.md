@@ -3,7 +3,7 @@ title: "スパチャメーカー"
 description: "スパチャ型の封筒を印刷するアプリ"
 image: "spacha_maker/spacha_maker.jpg"
 date: "2023-01-01"
-tags: "#iOS"
+tags: "#iOS #Flutter"
 ---
 
 YouTubeのスーパーチャットを模した封筒を印刷できるアプリ。
@@ -12,7 +12,7 @@ YouTubeのスーパーチャットを模した封筒を印刷できるアプリ�
 
 - Flutter
 
-## 「スパチャメーカー」について
+## 「スパチャメーカー」の開発背景
 
 正月にX（旧Twitter）を見ていたとき、YouTubeのスーパーチャットを模したポチ袋を見て、これを作れるアプリを開発したら面白そうだと思い作り始めました。
 

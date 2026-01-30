@@ -3,7 +3,7 @@ title: "QR読み取り・作成アプリ"
 description: "QRコードの読み取り・作成専用アプリ"
 image: "qr_app/qr_app.jpg"
 date: "2021-05-01"
-tags: "#iOS"
+tags: "#iOS #Flutter"
 ---
 
 QRコードを読み取ったり、オリジナルのQRコードを作成できるアプリ。
@@ -11,8 +11,9 @@ QRコードを読み取ったり、オリジナルのQRコードを作成でき�
 ## 使用した技術
 
 - Flutter
+- Google Mobile Ads
 
-## 「QR読み取り・作成アプリ」について
+## 「QR読み取り・作成アプリ」の開発背景
 
 大学生のときにプログラミングを独学で学び始めて、Flutterで初めて開発・リリースしたアプリ。
 
