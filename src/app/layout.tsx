@@ -6,7 +6,7 @@ import BlurryBlob from "@/components/animate/background/blurry-blob";
 import { Header } from "@/components/Header";
 import { body_font, display_font } from "@/libs/fonts";
 
-const siteName = "いもりん / 毎日開発エンジニア";
+const siteName = "いもりんのポートフォリオ";
 const description = "いもりんのポートフォリオサイトです。";
 const url = "https://imorin-portfolio.vercel.app/";
 
