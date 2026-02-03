@@ -36,6 +36,9 @@ export default function WorkSlugCondition({
   const date = data.date; // 作成日
   const tags = data.tags ? data.tags.split(" ") : []; // タグ
   const image = data.image;
+  const appStoreUrl = data.appStoreUrl; // App Storeリンク
+  const webUrl = data.webUrl; // Webアプリリンク
+  const delisted = data.delisted; // ストアから削除済みフラグ
   const imagePath =
     process.env.NODE_ENV === "development"
       ? image?.startsWith("/")
@@ -66,6 +69,69 @@ export default function WorkSlugCondition({
         <div className="text-base font-bold mt-4">{date}</div>
         <div className="text-base font-bold mt-4">{tags}</div>
         <MarkdownRenderer content={content} />
+
+        {/* アプリへのリンクセクション */}
+        <div className="mt-8 mb-4">
+          {appStoreUrl && !delisted && (
+            <a
+              href={appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Image
+                src="/images/AppStoreBadge.svg"
+                alt="Download on the App Store"
+                width={135}
+                height={45}
+                className="hover:opacity-80 transition-opacity"
+              />
+            </a>
+          )}
+
+          {webUrl && (
+            <a
+              href={webUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-flex items-center px-6 py-3 rounded-lg ${glassmorphism} hover:bg-white/20 transition-all font-medium`}
+            >
+              <svg
+                className="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+              Webアプリを開く
+            </a>
+          )}
+
+          {delisted && (
+            <div className={`inline-flex items-center px-6 py-3 rounded-lg ${glassmorphism} text-gray-400`}>
+              <svg
+                className="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              このアプリは現在ストアから削除されています
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
