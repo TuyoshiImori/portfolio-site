@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import BlurryBlob from "@/components/animate/background/blurry-blob";
 import { Header } from "@/components/Header";
 import { body_font, display_font } from "@/libs/fonts";
+import { Analytics } from '@vercel/analytics/react';
 
 const siteName = "いもりんのポートフォリオ";
 const description = "いもりんのポートフォリオサイトです。";
@@ -71,6 +72,7 @@ export default function RootLayout({
             </div>
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
