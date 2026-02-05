@@ -5,7 +5,7 @@ import { ThemeProvider } from "next-themes";
 import BlurryBlob from "@/components/animate/background/blurry-blob";
 import { Header } from "@/components/Header";
 import { body_font, display_font } from "@/libs/fonts";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/next"
 
 const siteName = "いもりんのポートフォリオ";
 const description = "いもりんのポートフォリオサイトです。";
